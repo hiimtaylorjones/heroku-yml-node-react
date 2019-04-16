@@ -2,7 +2,15 @@
 
 This is a quick walkthrough of how to get a containerized Node app up and running on Heroku.
 
-## Getting started
+## React via Create React App
+
+
+
+## Client Backend via Express
+
+
+
+## Deploying to Heroku
 
 Its suggested that you have Docker installed on your local machine to properly test out
 images. However, since Heroku builds the images based off `heroku.yml` and the `Dockerfile` here, it isn't necessary. 
@@ -25,3 +33,5 @@ We then can push and build our application on Heroku via:
 ```
 git push heroku master
 ```
+
+We'll use this command for all future pushes to deploy code.

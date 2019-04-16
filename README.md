@@ -26,6 +26,13 @@ run:
   web: npm start
 ```
 
+The `setup` phase in our example is only specifying which add-ons we want our Heroku 
+app to use. In this case, its a straightforward `heroku-postgres` instance. 
+
+The `build` phase specifies two things: the docker image locations for each `web` process and the configuration that relates to the entire container. In our case, we only have _one_ web process. However, it we had a `worker` image to build, it would go under the `docker` section as `worker`.
+
+The `run` phase is the closest thing to a `Procfile` that containerized apps have. It specifies what each process in a containerized app looks like. For our example, we're just telling it what the `web` process looks like. 
+
 ## React via Create React App
 
 We'll be leveraging the [`create-react-app`](https://github.com/facebook/create-react-app) project for this tutorial to create an efficient React app with little to no scaffolding required. 

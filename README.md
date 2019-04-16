@@ -4,11 +4,13 @@ This is a quick walkthrough of how to get a containerized Node app up and runnin
 
 ## React via Create React App
 
+We'll be leveraging the [`create-react-app`](https://github.com/facebook/create-react-app) project for this tutorial to create an efficient React app with little to no scaffolding required. 
 
+Upon downloading this project, you simply can run `yarn` to install dependencies followed by `npm start` to trigger the server.
 
 ## Client Backend via Express
 
-
+Coming soon.
 
 ## Deploying to Heroku
 

@@ -4,6 +4,28 @@ Currently found at: https://quiet-reaches-40976.herokuapp.com/
 
 This is a quick walkthrough of how to get a containerized Node app up and running on Heroku.
 
+## Breaking down the heroku.yml file
+
+Heroku offers a containerization service that allows users to specify configuration aspects of Heroku - along with a provided `Dockerfile` - to build out their Docker app on Heroku. This manifest is pushed up to Heroku and built into a containerized app.
+
+There are a lot of use cases and potential possibilities for using `heroku.yml`, but I want to break down what it would look like for a Node + React app that's included in this project:
+
+`heroku.yml`
+
+```
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+build:
+  docker:
+    web: Dockerfile
+  config:
+    NODE_ENV: production
+run:
+  web: npm start
+```
+
 ## React via Create React App
 
 We'll be leveraging the [`create-react-app`](https://github.com/facebook/create-react-app) project for this tutorial to create an efficient React app with little to no scaffolding required. 
